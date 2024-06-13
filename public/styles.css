@@ -1,0 +1,1415 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Estilo del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #ffd700, #ffec8b);
+    /* Fondo degradado amarillo */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    width: 200px;
+    /* Logo más grande */
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 8px;
+    /* Reducir el margen entre elementos */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 3px 6px;
+    /* Reducir aún más el padding */
+    border-radius: 3px;
+    /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Transición suave */
+}
+
+
+
+
+
+/* Estilo de la sección de inicio */
+#inicio {
+    padding: 25px 0;
+    /* Aumentamos el espacio alrededor del contenido */
+    color: #e7e7e7;
+    /* Cambiamos el color del texto a blanco para que sea más visible */
+    text-align: center;
+    position: relative;
+    background-color: rgba(223, 221, 199, 0.5);
+    /* Cambiamos el color de fondo a un tono oscuro */
+    overflow: hidden;
+    /* Evita que las imágenes se desborden */
+}
+
+#inicio::before,
+#inicio::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    /* Ajustamos el tamaño de las imágenes */
+    height: 200px;
+    /* Ajustamos el tamaño de las imágenes */
+    background-image: url('img/200x100padel.jpg');
+    /* Ruta de tu imagen de fondo */
+    background-size: contain;
+    /* Ajustamos el tamaño de la imagen para que quepa dentro del contenedor */
+    background-repeat: no-repeat;
+    /* Evita que la imagen de fondo se repita */
+}
+
+#inicio::before {
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    /* Centramos la imagen verticalmente y la alineamos a la izquierda */
+}
+
+#inicio::after {
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+    /* Centramos la imagen verticalmente y la alineamos a la derecha */
+}
+
+/* Estilos para el contenido */
+#inicio .titulo-container {
+    position: relative;
+    /* Asegura que el contenido esté por encima de las imágenes de fondo */
+    z-index: 1;
+    /* Coloca el contenido por encima de las imágenes de fondo */
+}
+
+
+
+#inicio .subtitulo {
+    font-size: 18px;
+    /* Tamaño del subtitulo */
+    margin-bottom: 40px;
+    /* Añadimos más espacio después del subtitulo */
+    color: black;
+}
+
+#inicio .reserve-button button {
+    background-color: #fff000;
+    /* Color de fondo del botón */
+    color: #070707;
+    /* Color del texto del botón */
+    padding: 15px 30px;
+    /* Espaciado interno del botón */
+    font-size: 20px;
+    /* Tamaño del texto del botón */
+    border: none;
+    /* Elimina el borde del botón */
+    border-radius: 5px;
+    /* Borde redondeado del botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease;
+    /* Transición suave del color de fondo */
+}
+
+#inicio .reserve-button button:hover {
+    background-color: #0a0701;
+    /* Cambia el color de fondo al pasar el ratón */
+    color: yellow;
+}
+
+
+/* Estilos para los párrafos dentro de la sección Escuela, Torneos, Instalaciones y Patrocinadores */
+#escuela p,
+#torneos p,
+#instalaciones p,
+#patrocinadores p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff;
+    /* Color de texto blanco */
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+    padding: 10px;
+    /* Espaciado interno */
+    border-radius: 5px;
+    /* Bordes redondeados */
+}
+
+/* Estilos adicionales para resaltar el texto en negrita */
+#escuela p strong,
+#torneos p strong,
+#instalaciones p strong,
+#patrocinadores p strong {
+    font-weight: bold;
+}
+
+
+
+
+main {
+    padding: 20px;
+}
+
+.seccion {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.seccion:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-info,
+.legal-info {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.contact-info h3,
+.legal-info h3 {
+    color: #ffcc00;
+    /* Color de los títulos */
+    border-bottom: 2px solid #ffcc00;
+    /* Línea decorativa debajo de los títulos */
+    padding-bottom: 10px;
+}
+
+.contact-info p,
+.legal-info p {
+    margin: 10px 0;
+}
+
+.scroll-top {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.scroll-top img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.scroll-top span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.scroll-top a:hover img {
+    transform: rotate(360deg);
+}
+
+.scroll-top a:hover span {
+    color: #ffcc00;
+    /* Color del texto al pasar el ratón */
+}
+
+.scroll-top a {
+    color: #ffcc00;
+    /* Color del texto del enlace */
+    text-decoration: none;
+}
+
+.scroll-top a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    color: #aaa;
+    /* Color del texto de copyright */
+    font-size: 14px;
+}
+
+.copyright a {
+    color: #ffcc00;
+    /* Color del enlace de autor */
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    /* Cambia el color de fondo del encabezado */
+    padding: 10px 20px;
+    /* Ajusta el padding según sea necesario */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Añade una sombra suave */
+}
+
+#escuela {
+    background-image: url('img/azul.jpg');
+    color: white;
+    /* Cambia el color del texto a blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Agrega un sombreado al texto */
+}
+
+#torneos {
+    background-image: url('img/azul.jpg');
+    color: white;
+    /* Cambia el color del texto a blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Agrega un sombreado al texto */
+}
+
+/* Estilos para la sección de profesores de pádel */
+#profesores {
+    background-color: #e0f2f1; /* Azul claro, similar al color de una pista de pádel */
+    color: #333;
+    padding: 50px 0;
+    text-align: center;
+    background-image: url('img/azul2.jpg');
+    background-size: cover; /* La imagen se ajusta para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el fondo */
+}
+
+#profesores-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.profesor-item {
+    width: 300px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.profesor-item:hover {
+    transform: translateY(-5px);
+}
+
+.info-profesor {
+    background-color: rgba(2, 2, 2, 0.8); /* Fondo semi-transparente */
+    color: #ffffff; /* Texto blanco */
+    padding: 15px; /* Reducir el padding para dejar más espacio para la foto de fondo */
+    border-radius: 10px; /* Redondear las esquinas */
+    transition: transform 0.3s ease;
+    border-top: 4px solid #0056b3; /* Azul oscuro */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Agregar sombra al texto */
+}
+
+
+.info-profesor p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.profesor-item:hover .info-profesor {
+    transform: translateY(0);
+}
+.nombre-apellido {
+    text-align: center;
+    font-size: 1.7rem; /* Aumentar el tamaño del texto */
+    color: #ffffff; /* Blanco para un mejor contraste */
+    margin: 10px 0;
+    position: relative;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra de la caja */
+}
+
+
+.nombre-apellido::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del texto */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+
+.descripcion-profesor {
+    display: none;
+}
+
+
+
+
+#patrocinadores {
+    background-image: url('img/azul.jpg');
+    /* Ruta de la imagen de fondo para la sección de patrocinadores */
+    color: white;
+    /* Cambia el color del texto a blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Agrega un sombreado al texto */
+}
+
+/* Agregamos estilos para el contenedor de las imágenes de los patrocinadores */
+.patrocinadores-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilizamos las imágenes de los patrocinadores */
+.patrocinadores-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre las imágenes */
+.patrocinadores-container img:hover {
+    transform: scale(1.1);
+}
+
+#instalaciones {
+    background-image: url('img/azul.jpg');
+    /* Ruta de la imagen de fondo para la sección de instalaciones */
+    color: white;
+    /* Cambia el color del texto a blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Agrega un sombreado al texto */
+}
+
+
+.seccion-contenido p {
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#test {
+    background-image: url('img/test.jpg');
+    /* Ruta de la imagen de fondo para la sección de test */
+    color: white;
+    /* Cambia el color del texto a blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Agrega un sombreado al texto */
+    padding: 20px;
+    /* Agregar un espacio alrededor del contenido */
+    border-radius: 10px;
+    /* Hacer los bordes redondeados */
+    margin-bottom: 20px;
+    /* Agregar un espacio debajo de la sección */
+}
+
+#test-container {
+    margin-bottom: 20px;
+    /* Agregar un espacio debajo del contenedor de preguntas */
+}
+
+#submit-test {
+    background-color: #4CAF50;
+    /* Color de fondo verde */
+    color: white;
+    /* Color de texto blanco */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    border: none;
+    /* Eliminar borde */
+    border-radius: 5px;
+    /* Hacer los bordes redondeados */
+    cursor: pointer;
+    /* Cambiar cursor al pasar el ratón */
+    transition: background-color 0.3s;
+    /* Transición suave para el cambio de color de fondo */
+}
+
+#submit-test:hover {
+    background-color: #45a049;
+    /* Cambiar color de fondo al pasar el ratón */
+}
+
+#test-result {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fondo semi-transparente */
+    color: #fff;
+    /* Color del texto */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Sombra para resaltar */
+    text-align: center;
+    z-index: 9999;
+    /* Asegura que esté por encima de otros elementos */
+    max-width: 80%;
+    /* Ancho máximo del resultado */
+    animation: fadeIn 0.5s ease forwards;
+    /* Animación de entrada */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos para el contenido del resultado */
+#test-result h3 {
+    margin-bottom: 10px;
+}
+
+#test-result p {
+    margin-bottom: 20px;
+}
+
+
+
+.seccion-titulo {
+    text-align: center;
+    /* Centrar el título */
+}
+
+.seccion-contenido {
+    text-align: justify;
+    /* Justificar el texto */
+    padding: 10px;
+    /* Agregar espacio interno */
+}
+
+.pregunta {
+    margin-bottom: 10px;
+    /* Agregar espacio entre preguntas */
+}
+
+.guia-mensaje {
+    font-style: italic;
+    /* Estilo de fuente cursiva */
+    text-align: center;
+    /* Centrar el texto */
+    margin-top: 10px;
+    /* Agregar espacio arriba */
+}
+
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    /* Cambia el color del texto a blanco */
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+    font-size: 18px;
+    /* Tamaño de fuente */
+    font-weight: bold;
+    /* Añade negrita al texto */
+    text-transform: uppercase;
+    /* Convierte el texto a mayúsculas */
+    transition: color 0.3s ease;
+    /* Transición suave para el cambio de color */
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+    /* Cambia el color del texto al pasar el ratón */
+}
+
+h2 {
+    color: white;
+    /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Color de fondo semitransparente */
+    padding: 10px;
+    /* Espacio interno alrededor del texto */
+    border-radius: 8px;
+    /* Borde redondeado */
+}
+
+/* Estilos para la ventana modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Asegurar que la modal esté encima de otros elementos */
+}
+
+.modal img {
+    max-width: 90%;
+    /* Ajustar el ancho máximo de la imagen */
+    max-height: 90%;
+    /* Ajustar la altura máxima de la imagen */
+    border-radius: 8px;
+    /* Borde redondeado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Sombra alrededor de la imagen */
+    animation: zoomIn 0.3s ease;
+    /* Animación de entrada suave */
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.enlace-blanco {
+    color: rgb(11, 238, 22);
+    /* Color del texto blanco */
+    text-decoration: none;
+    /* Quitamos el subrayado predeterminado */
+    transition: color 0.3s;
+    /* Efecto de transición para el cambio de color */
+    font-weight: bold;
+    /* Texto en negrita */
+    font-size: 20px;
+    /* Tamaño de fuente aumentado */
+    letter-spacing: 1px;
+    /* Espaciado entre letras */
+    margin-bottom: 10px;
+    /* Agregamos margen por debajo */
+}
+
+.enlace-blanco:hover {
+    color: #f8d31b;
+    /* Cambiamos el color al pasar el mouse */
+    text-decoration: underline;
+    /* Subrayamos el enlace al pasar el mouse */
+}
+
+
+/* Estilos para el botón de scroll hacia arriba */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para la imagen de la pelota de pádel */
+.scroll-top img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    /* Agrega una transición suave */
+}
+
+/* Rotación al pasar el ratón sobre la imagen */
+.scroll-top img:hover {
+    transform: rotate(180deg);
+}
+
+/* Estilos para el botón de scroll hacia arriba */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: 9999;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+}
+
+.scroll-to-top img {
+    width: 40px;
+    height: auto;
+}
+
+/* Estilos para la imagen de la pelota de pádel */
+.scroll-top img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    /* Agrega una transición suave */
+}
+
+.scroll-top span {
+    display: none;
+    /* Inicialmente ocultar el mensaje */
+    position: absolute;
+    top: -20px;
+    /* Ajusta la posición vertical según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.scroll-top:hover span {
+    display: block;
+    /* Mostrar el mensaje al pasar el ratón sobre la pelota */
+}
+
+/* Rotación al pasar el ratón sobre la imagen */
+.scroll-top img:hover {
+    transform: rotate(180deg);
+}
+
+.club-message {
+    animation: fadeInUp 1s ease;
+    /* Agrega una animación de entrada */
+}
+
+.reserve-button {
+    animation: fadeInUp 1s ease;
+    /* Agrega una animación de entrada */
+    margin-top: 30px;
+    /* Espacio superior para separar el botón del mensaje */
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+        /* Mueve el elemento hacia arriba */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.club-message {
+    animation: fadeInUp 1s ease;
+    /* Agrega una animación de entrada */
+}
+
+.reserve-button {
+    animation: fadeInUp 1s ease;
+    /* Agrega una animación de entrada */
+    margin-top: 30px;
+    /* Espacio superior para separar el botón del mensaje */
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+        /* Mueve el elemento hacia arriba */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para el botón */
+.reserve-button button {
+    background-color: #ff9800;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-button button:hover {
+    background-color: #f57c00;
+    /* Cambia el color de fondo al pasar el ratón */
+}
+
+
+.titulo-container {
+    margin-bottom: 20px;
+    /* Espacio adicional entre el título y el botón */
+}
+
+.titulo-principal {
+    color: white;
+    /* Color del texto */
+    background-color: black;
+    /* Cambia el fondo detrás del texto a negro */
+    animation: bounce 0.5s infinite alternate;
+    display: inline-block;
+    font-size: 36px;
+    /* Tamaño del título */
+    font-weight: bold;
+    /* Fuente en negrita */
+    margin-bottom: 20px;
+    /* Añadimos un espacio después del título */
+}
+
+
+.reserve-button {
+    display: inline-block;
+}
+
+.reserve-button button {
+    background-color: #080700;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reserve-button button:hover {
+    background-color: #e0bd00;
+    /* Cambia el color de fondo al pasar el mouse */
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.profesor-nombre {
+    font-size: 20px;
+    /* Tamaño del nombre del profesor */
+    color: #ffffff;
+    /* Color del nombre del profesor */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima */
+    transition: color 0.3s;
+    /* Efecto de transición para el cambio de color */
+    display: block;
+    /* Para que el texto esté centrado horizontalmente */
+    text-align: center;
+    /* Para centrar el texto */
+    margin-left: 0;
+    /* Elimina cualquier margen izquierdo */
+}
+
+
+
+
+.contenedor-torneos {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Para Firefox */
+    -ms-overflow-style: none;
+    /* Para Internet Explorer 10+ */
+}
+
+.contenedor-torneos::-webkit-scrollbar {
+    display: none;
+    /* Ocultar la barra de desplazamiento para navegadores basados en WebKit */
+}
+
+.imagen-torneo {
+    flex: 0 0 auto;
+    /* No permitir que las imágenes crezcan, pero permitir que se ajusten */
+    margin-right: 20px;
+    /* Espacio entre las imágenes */
+}
+
+.imagen-torneo img {
+    max-width: 350px;
+    /* Ajustar el tamaño máximo de la imagen */
+    max-height: 300px;
+    /* Ajustar la altura máxima de la imagen */
+}
+
+.botones-tarifas {
+    text-align: center;
+    /* Centra los botones */
+    margin-top: 20px;
+    /* Espacio superior */
+}
+
+.botones-tarifas button {
+    padding: 10px 20px;
+    /* Añade espacio alrededor del texto */
+    margin: 5px;
+    /* Espacio entre botones */
+    border: none;
+    /* Quita el borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    background-color: #38c40d;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease;
+    /* Transición suave del color de fondo */
+}
+
+.botones-tarifas button:hover {
+    background-color: #c9ff04;
+    /* Cambia el color de fondo al pasar el mouse */
+}
+
+#escuela {
+    margin-top: 50px;
+    /* Agrega espacio en la parte superior */
+    margin-bottom: 50px;
+    /* Agrega espacio en la parte inferior */
+}
+
+#tabla-precios table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabla-precios th,
+#tabla-precios td {
+    padding: 15px;
+    text-align: center;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+#tabla-precios th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    /* Añade un borde a los encabezados */
+}
+
+#tabla-precios td {
+    border: 1px solid #ccc;
+    /* Añade un borde a las celdas */
+}
+
+#tabla-precios tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+#tabla-precios tr:hover {
+    background-color: #f2f2f2;
+}
+
+#tabla-precios td:first-child {
+    font-weight: bold;
+}
+
+#tabla-precios th,
+#tabla-precios td {
+    font-size: 16px;
+}
+
+
+#submit-test {
+    background-color: #4CAF50;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    padding: 15px 20px;
+    /* Espacio alrededor del texto */
+    font-size: 16px;
+    /* Tamaño del texto */
+    border: none;
+    /* Borde sin estilo */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cursor al pasar por encima */
+    transition: background-color 0.3s;
+    /* Transición suave del color de fondo */
+}
+
+.pregunta p {
+    text-align: left;
+    /* Alinear el texto a la izquierda */
+}
+
+#submit-test:hover {
+    background-color: #45a049;
+    /* Cambio de color al pasar el mouse */
+}
+
+/* Estilos para la sección de dejar opinión */
+#opinion-form {
+    display: none;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#opinion-form h2 {
+    color: #333;
+    text-align: center;
+    /* Centrar el título */
+}
+
+#opinion-formulario {
+    margin-top: 20px;
+    /* Aumentar el espacio superior */
+}
+
+#opinion-formulario label {
+    display: block;
+    margin-bottom: 10px;
+    /* Aumentar el espacio inferior */
+}
+
+#opinion-formulario select,
+#opinion-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    /* Aumentar el espacio inferior */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    /* Aumentar el tamaño de la fuente */
+}
+
+#opinion-formulario button[type="submit"] {
+    background-color: #007bff;
+    /* Cambiar el color de fondo */
+    color: white;
+    padding: 12px 20px;
+    /* Aumentar el espacio interno */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    /* Aumentar el tamaño de la fuente */
+    display: block;
+    margin: 0 auto;
+    /* Centrar el botón */
+}
+
+#opinion-formulario button[type="submit"]:hover {
+    background-color: #0056b3;
+    /* Cambiar el color de fondo al pasar el ratón */
+}
+
+.opinion-header {
+    text-align: center;
+    margin-bottom: 30px;
+    /* Aumentamos el espacio inferior */
+}
+
+.opinion-header h1 {
+    color: #333;
+    font-size: 32px;
+    /* Aumentamos el tamaño del título */
+    margin-bottom: 10px;
+    /* Aumentamos el espacio inferior */
+}
+
+.opinion-header p {
+    color: #666;
+    font-size: 18px;
+    /* Aumentamos el tamaño del texto */
+    line-height: 1.5;
+    /* Aumentamos el espacio entre líneas */
+}
+
+#dni-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#dni-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#dni-section input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#verificar-dni {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#verificar-dni:hover {
+    background-color: #45a049;
+}
+
+#error-message {
+    color: red;
+    display: none;
+}
+
+/* inicio new */
+.secciones-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-card {
+    width: 250px;
+    /* Aumentar el ancho */
+    height: 200px;
+    /* Mantener la forma cuadrada */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    /* Agregar transición de color */
+    cursor: pointer;
+    margin: 10px;
+}
+
+.button-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #fff000;
+    /* Cambiar a un tono de amarillo suave */
+}
+
+.button-icon {
+    text-align: center;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+    /* Añadir transición al icono */
+}
+
+.button-icon i {
+    font-size: 36px;
+    color: #007bff;
+}
+
+.button-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.button-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.button-content p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Añadir animación al icono al pasar el ratón */
+.button-card:hover .button-icon i {
+    transform: rotate(360deg);
+}
+
+
+#carrusel-comentarios {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+    overflow: hidden;
+    white-space: pre-wrap;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+.comentario-item {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comentario-item p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: center;
+    /* Centrar el texto */
+}
+
+.comentario-item .profesor {
+    font-style: italic;
+    color: #888;
+}
+
+.comentario-item:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#quePiensaLaGente h2 {
+    text-align: center;
+    /* Centrar el texto */
+    font-size: 24px;
+    /* Tamaño de fuente */
+    color: #333;
+    /* Color del texto */
+    margin-bottom: 20px;
+    /* Espaciado inferior */
+    background-color: transparent;
+    /* Hacer el fondo transparente */
+    padding: 10px 0;
+    /* Agregar un espacio interno para el texto */
+    border-bottom: 2px solid #007bff;
+    /* Agregar una línea inferior azul */
+}
+
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+    /* Cambiar el color del texto al pasar el ratón */
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    /* Ajusta esta altura máxima según tu preferencia */
+}
+
+
+.slide-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    color: #fff;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.slide-content p {
+    margin: 0;
+}
+
+.slide.active .slide-content {
+    opacity: 1;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    /* Color de fondo original */
+    color: #fff;
+    /* Color del icono */
+    border: none;
+    padding: 10px;
+    /* Ajusta el tamaño del botón */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Transición suave */
+    z-index: 1;
+    /* Asegura que los botones estén sobre las diapositivas */
+    border-radius: 50%;
+    /* Hace que los botones tengan forma de círculo */
+}
+
+.arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+    /* Cambia el color de fondo al pasar el ratón */
+}
+
+.prev {
+    left: 20px;
+    /* Ajusta la posición del botón "prev" */
+}
+
+.next {
+    right: 20px;
+    /* Ajusta la posición del botón "next" */
+}
+
+/*instalaciones*/
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.slide-content {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+.slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow.prev {
+    left: 10px;
+}
+
+.arrow.next {
+    right: 10px;
+}
